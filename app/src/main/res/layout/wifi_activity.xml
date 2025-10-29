@@ -1,6 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="30dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textViewWifiTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/wifiTitleDefault"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewSSID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ssidRes" />
+
+    <TextView
+        android:id="@+id/textViewBSSID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bssidRes" />
+
+    <TextView
+        android:id="@+id/textViewFrec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/frecRes" />
+
+    <TextView
+        android:id="@+id/textViewStrenght"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/strengthRes" />
+
+    <TextView
+        android:id="@+id/textViewSpeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/speedRes" />
+
+    <TextView
+        android:id="@+id/textViewIP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ipRes" />
+
+    <TextView
+        android:id="@+id/textViewGateway"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gateRes" />
+
+    <TextView
+        android:id="@+id/textViewMask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/maskRes" />
+
+    <TextView
+        android:id="@+id/textViewHidden"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hiddenRes" />
+
+    <Button
+        android:id="@+id/buttonGetWifiData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/getWifiData" />
+
+</LinearLayout>

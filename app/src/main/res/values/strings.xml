@@ -2,4 +2,15 @@
     <string name="app_name" translatable="false">DoxeApp</string>
     <string name="showSim">Show SIM</string>
     <string name="showWifi">Show WiFi</string>
+    <string name="wifiTitleDefault">Wifi Default</string>
+    <string name="getWifiData">Get WiFi Data</string>
+    <string name="ssidRes">"SSID: "</string>
+    <string name="bssidRes">BSSID:</string>
+    <string name="frecRes">Frequency:</string>
+    <string name="strengthRes">WiFi Strength:</string>
+    <string name="speedRes">WiFi Speed:</string>
+    <string name="ipRes">IP:</string>
+    <string name="hiddenRes">"Hidden ?: "</string>
+    <string name="gateRes">Gateway:</string>
+    <string name="maskRes">Netmask:</string>
 </resources>
