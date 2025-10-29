@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name" translatable="false">DoxeApp</string>
+    <string name="showSim">Show SIM</string>
+    <string name="showWifi">Show WiFi</string>
+</resources>
