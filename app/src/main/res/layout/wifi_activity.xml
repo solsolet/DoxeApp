@@ -6,7 +6,6 @@
     android:orientation="vertical"
     android:padding="30dp">
 
-
     <TextView
         android:id="@+id/textViewWifiTitle"
         android:layout_width="wrap_content"
@@ -20,55 +19,64 @@
         android:id="@+id/textViewSSID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/ssidRes" />
+        android:text="@string/ssidRes"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textViewBSSID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/bssidRes" />
+        android:text="@string/bssidRes"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textViewFrec"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/frecRes" />
+        android:text="@string/frecRes"
+        android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/textViewStrenght"
+        android:id="@+id/textViewStrength"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/strengthRes" />
+        android:text="@string/strengthRes"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textViewSpeed"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/speedRes" />
+        android:text="@string/speedRes"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textViewIP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/ipRes" />
+        android:text="@string/ipRes"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textViewGateway"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/gateRes" />
+        android:text="@string/gateRes"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textViewMask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/maskRes" />
+        android:text="@string/maskRes"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textViewHidden"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hiddenRes" />
+        android:text="@string/hiddenRes"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/buttonGetWifiData"
