@@ -14,4 +14,12 @@
     <string name="gateRes">"Gateway: "</string>
     <string name="maskRes">"Netmask: "</string>
     <string name="infoUnavailable">No connection / info unavailable</string>
+    <string name="simtitle">SIM</string>
+    <string name="simSerialNumer">SIM Serial Number:</string>
+    <string name="simImsi">SIM IMSI:</string>
+    <string name="simOperador">Operator Name:</string>
+    <string name="simRed">Network Type:</string>
+    <string name="simImei">SIM IMEI:</string>
+    <string name="getSimData">Get SIM Data</string>
+    <string name="simState">State:</string>
 </resources>

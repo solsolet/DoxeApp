@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="30dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textViewSIMTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/simtitle"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/simState"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewIccid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simSerialNumer"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewOperador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simOperador"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewImsi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simImsi"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewNetwork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simRed"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewImei"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simImei"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/buttonGetSimData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/getSimData" />
+</LinearLayout>
