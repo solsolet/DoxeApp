@@ -22,12 +22,12 @@
         android:text="@string/simState"
         android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/textViewIccid"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/simSerialNumer"
-        android:textSize="16sp" />
+<!--    <TextView-->
+<!--        android:id="@+id/textViewIccid"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/simSerialNumer"-->
+<!--        android:textSize="16sp" />-->
 
     <TextView
         android:id="@+id/textViewOperador"
@@ -36,12 +36,12 @@
         android:text="@string/simOperador"
         android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/textViewImsi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/simImsi"
-        android:textSize="16sp" />
+<!--    <TextView-->
+<!--        android:id="@+id/textViewImsi"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/simImsi"-->
+<!--        android:textSize="16sp" />-->
 
     <TextView
         android:id="@+id/textViewNetwork"
@@ -50,12 +50,12 @@
         android:text="@string/simRed"
         android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/textViewImei"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/simImei"
-        android:textSize="16sp" />
+<!--    <TextView-->
+<!--        android:id="@+id/textViewImei"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/simImei"-->
+<!--        android:textSize="16sp" />-->
 
     <Button
         android:id="@+id/buttonGetSimData"

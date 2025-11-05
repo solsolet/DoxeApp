@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "es.ua.eps.doxeapp"
-        minSdk = 35
+        minSdk = 36 //29 = needed to permissions READ_PRIVILEGED_PHONE_STATE ??
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
