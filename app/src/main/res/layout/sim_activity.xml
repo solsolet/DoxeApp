@@ -33,7 +33,7 @@
         android:id="@+id/textViewOperador"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/simOperador"
+        android:text="@string/networkOperator"
         android:textSize="16sp" />
 
 <!--    <TextView-->
@@ -42,6 +42,13 @@
 <!--        android:layout_height="wrap_content"-->
 <!--        android:text="@string/simImsi"-->
 <!--        android:textSize="16sp" />-->
+
+    <TextView
+        android:id="@+id/textViewOperatorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="@string/simOperador" />
 
     <TextView
         android:id="@+id/textViewNetwork"
@@ -56,6 +63,34 @@
 <!--        android:layout_height="wrap_content"-->
 <!--        android:text="@string/simImei"-->
 <!--        android:textSize="16sp" />-->
+
+    <TextView
+        android:id="@+id/textViewSimCountryIso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="@string/simCountryISO" />
+
+    <TextView
+        android:id="@+id/textViewNetworkCountryIso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="@string/networkCountryIso" />
+
+    <TextView
+        android:id="@+id/textViewMultiSim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/multiSim"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewFid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="@string/simFid" />
 
     <Button
         android:id="@+id/buttonGetSimData"

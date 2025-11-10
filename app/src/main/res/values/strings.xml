@@ -17,9 +17,14 @@
     <string name="simtitle">SIM</string>
     <string name="simSerialNumer">SIM Serial Number:</string>
     <string name="simImsi">SIM IMSI:</string>
-    <string name="simOperador">Operator Name:</string>
-    <string name="simRed">Network Type:</string>
+    <string name="simOperador">"Operator Name: "</string>
+    <string name="simRed">"Network Type: "</string>
     <string name="simImei">SIM IMEI:</string>
     <string name="getSimData">Get SIM Data</string>
-    <string name="simState">State:</string>
+    <string name="simState">"State: "</string>
+    <string name="simCountryISO">"SIM Country ISO: "</string>
+    <string name="networkCountryIso">Network Country ISO:</string>
+    <string name="multiSim">"Multi SIM: "</string>
+    <string name="networkOperator">"Network Operator: "</string>
+    <string name="simFid">"FID: "</string>
 </resources>

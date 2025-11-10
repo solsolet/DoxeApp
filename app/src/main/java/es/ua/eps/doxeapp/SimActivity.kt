@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import es.ua.eps.doxeapp.databinding.SimActivityBinding
+import java.util.UUID
 
 class SimActivity : AppCompatActivity() {
     private lateinit var bindings: SimActivityBinding
@@ -54,7 +55,7 @@ class SimActivity : AppCompatActivity() {
 
     private fun getSimData(){
         with(bindings) {
-            val numState = telephonyMan.simState
+            val numState = telephonyMan.simState // Saber si hay cobertura, roaming...
             var state = ""
             when(numState){
                 TelephonyManager.SIM_STATE_UNKNOWN -> state = "Unknown"
@@ -73,8 +74,9 @@ class SimActivity : AppCompatActivity() {
             //val imei = telephonyMan.deviceId
             //val iccid = telephonyMan.simSerialNumber
 
-            val operador = telephonyMan.simOperator // operator name
-            val numNetworkType = telephonyMan.dataNetworkType
+            val operador = telephonyMan.simOperator             // MCC+MNC (mobile country code + mobile network code)
+            val nomOperador = telephonyMan.networkOperatorName  // Nombre del operador
+            val numNetworkType = telephonyMan.dataNetworkType   // Tipo de red móbil
             var networkType = ""
             when(numNetworkType){
                 TelephonyManager.NETWORK_TYPE_UNKNOWN -> networkType = "Unknown"
@@ -98,16 +100,28 @@ class SimActivity : AppCompatActivity() {
                 TelephonyManager.NETWORK_TYPE_IWLAN -> networkType = "IWLAN"
                 TelephonyManager.NETWORK_TYPE_NR -> networkType = "NR"
             }
+            val simCountryIso = telephonyMan.simCountryIso          // ISO del pais de la SIM
+            val networkCountryIso = telephonyMan.networkCountryIso  // Pais red actual (cambia si p.e. hay roaming)
+            val numMultiSim = telephonyMan.isMultiSimSupported      // El dispositivo soporta multiples SIM?
+            var multiSim = ""
+            when(numMultiSim){
+                TelephonyManager.MULTISIM_ALLOWED -> multiSim = "Allowed"
+                TelephonyManager.MULTISIM_NOT_SUPPORTED_BY_HARDWARE -> multiSim = "Not supported by hardware"
+                TelephonyManager.MULTISIM_NOT_SUPPORTED_BY_CARRIER -> multiSim = "Not supported by carrier"
+            }
+            var uniqueID = UUID.randomUUID().toString()             // FID, practica recomendada para ID unicos
 
-            textViewState.append(state) // Estado de los datos
+            textViewState.append(state)
             //textViewImsi.append(imsi)
             //textViewImei.append(imei)
             //textViewIccid.append(iccid)
-            textViewOperador.append(operador) // MCC+MNC (mobile country code + mobile network code)
-            textViewNetwork.append(networkType) // Tipo de red móbil
-
-            // Valorar: https://source.android.com/devices/tech/config/device-identifiers?hl=es-419
-            // https://developer.android.com/identity/user-data-ids?hl=es-419#instance-ids-guids
+            textViewOperador.append(operador)
+            textViewOperatorName.append(nomOperador)
+            textViewNetwork.append(networkType)
+            textViewSimCountryIso.append(simCountryIso)
+            textViewNetworkCountryIso.append(networkCountryIso)
+            textViewMultiSim.append(multiSim)
+            textViewFid.append(uniqueID)
         }
     }
 }
