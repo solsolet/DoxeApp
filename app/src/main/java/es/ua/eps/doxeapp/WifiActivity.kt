@@ -55,7 +55,8 @@ class WifiActivity : AppCompatActivity() {
                 val strength : String = WifiManager.calculateSignalLevel(wifiInf.rssi, 5).toString()
                 val speed : String = wifiInf.linkSpeed.toString()
                 val frequency : String = wifiInf.frequency.toString()
-                val ip : String = wifiInf.ipAddress.toString()
+                val ipDecimal = wifiInf.ipAddress
+                val ip : String = getFormattedIp(ipDecimal, "decimal")      // se puede poner modo=hex
                 val hidden : String = wifiInf.hiddenSSID.toString()
 
                 textViewStrength.append(strength)
@@ -65,7 +66,8 @@ class WifiActivity : AppCompatActivity() {
                 textViewHidden.append(hidden)
 
                 // Server DHCP
-                val gate : String = dhcpInfo.gateway.toString()
+                val gateDecimal = dhcpInfo.gateway
+                val gate = getFormattedIp(gateDecimal, "decimal")// se puede poner modo=hex
                 val mask : String = dhcpInfo.netmask.toString()
 
                 textViewGateway.append(gate)
@@ -76,4 +78,20 @@ class WifiActivity : AppCompatActivity() {
             }
         }
     }
+    private fun getFormattedIp(ipDecimal: Int, modo: String): String { // formato Hexadecimal
+        var res : String = ""
+        // Extrae octetos dirección IP
+        val octet1 = (ipDecimal and 0xFF000000.toInt()) shr 24
+        val octet2 = (ipDecimal and 0x00FF0000.toInt()) shr 16
+        val octet3 = (ipDecimal and 0x0000FF00.toInt()) shr 8
+        val octet4 = ipDecimal and 0x000000FF
+
+        when(modo){
+            "hex" -> res = String.format("%02X:%02X:%02X:%02X", octet1, octet2, octet3, octet4) // octeto a formato hex (dos dígitos, con 0 a la izquierda si es necesario)
+            "decimal" -> res = "$octet1.$octet2.$octet3.$octet4"
+        }
+        return res
+    }
+
+
 }
